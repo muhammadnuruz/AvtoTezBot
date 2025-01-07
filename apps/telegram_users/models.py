@@ -17,8 +17,8 @@ class TelegramUsers(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name = "Telegram Foydalanuvchi "
-        verbose_name_plural = "Telegram Foydalanuvchilar "
+        verbose_name = "Telegram user"
+        verbose_name_plural = "Telegram users"
 
     def __str__(self):
         return f"{self.full_name}"
