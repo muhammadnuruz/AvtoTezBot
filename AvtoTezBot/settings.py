@@ -110,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
@@ -164,4 +164,17 @@ MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
+]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Avto Tez",
+    "site_header": "Avto Tez Admin",
+    "site_brand": "Avto Tez",
+    "welcome_sign": "Xush kelibsiz Avto Tez boshqaruv tizimiga!",
+    "copyright": "© Avto Tez",
+}
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('ru', 'Русский'),
 ]
