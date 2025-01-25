@@ -61,11 +61,9 @@ Ism-Familiya: {call.from_user.full_name}""", parse_mode='HTML')
     }
     requests.post(url=f"http://127.0.0.1:8000/api/telegram-users/create/", data=data)
     if call.data.split("_")[-1] == 'uz':
-        await call.message.answer(text="Hush kelibsiz 😊", reply_markup=await main_menu_buttons(call.from_user.id))
-    elif call.data.split("_")[-1] == 'en':
-        await call.message.answer(text="Welcome 😊", reply_markup=await main_menu_buttons(call.from_user.id))
+        await call.message.answer(text="Hush kelibsiz 😊\n\nQaysi turdagi mashina uchun qidiryapsiz?", reply_markup=await main_menu_buttons(call.from_user.id))
     else:
-        await call.message.answer(text="Добро пожаловать 😊", reply_markup=await main_menu_buttons(call.from_user.id))
+        await call.message.answer(text="Добро пожаловать 😊\n\nКакой тип автомобиля вы ищете?.", reply_markup=await main_menu_buttons(call.from_user.id))
     await state.finish()
 
 
