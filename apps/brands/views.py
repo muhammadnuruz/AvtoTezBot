@@ -15,3 +15,9 @@ class BrandsDetailViewSet(ListAPIView):
         return Brands.objects.filter(
             Q(category__icontains=category.lower()) | Q(ru_category__icontains=category.lower())
         )
+
+
+class AllBrandsListViewSet(ListAPIView):
+    queryset = Brands.objects.all()
+    permission_classes = [AllowAny]
+    serializer_class = BrandsSerializer
